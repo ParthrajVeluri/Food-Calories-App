@@ -1,5 +1,6 @@
 from tortoise.models import Model 
 from tortoise import fields
+import sqlite3
 
 class NutritionModel(Model):
     id = fields.IntField(pk=True)
@@ -12,3 +13,18 @@ class NutritionModel(Model):
     carbohydrates_g = fields.FloatField(max_length=10)
     protein_g = fields.FloatField(max_length=10)
     sugar_g = fields.FloatField(max_length=10)
+
+def get_food_from_db(food_name: str):
+    """
+    This function queries the SQLite database for a row matching the food_name.
+    """
+    conn = sqlite3.connect("db.sqlite3.db")  # Replace with the actual path to your database file
+    cursor = conn.cursor()
+
+    # Query to select a row where the food name matches the model's output
+    cursor.execute("SELECT * FROM NutritionModel WHERE name = ?", (food_name,))
+    result = cursor.fetchone()  # Fetch the first matching row
+
+    conn.close()
+    
+    return result

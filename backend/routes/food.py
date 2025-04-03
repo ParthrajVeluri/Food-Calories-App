@@ -1,10 +1,11 @@
 from fastapi import APIRouter, Query
-import cv2
 from typing import List
 from routes.stream import capture_frame
 from pydantic import BaseModel
 from models.nutrition import NutritionModel
 import numpy as np
+from services.food_classifier.food_classifier import classify_food
+
 
 router = APIRouter(
     tags=["Nutritional Information"]
@@ -28,19 +29,12 @@ async def get_food_classification():
     # Check if the frame is None, which indicates a problem
     if frame is None:
         return {"error": "Failed to capture frame"}
-
-    # Preprocess the frame if necessary (resize, normalize, etc.)
-    try:
-        frame_resized = cv2.resize(frame, (224, 224))  # Example size for ML models
-    except cv2.error as e:
-        return {"error": f"Failed to resize frame: {str(e)}"}
-    
-    frame_input = np.expand_dims(frame_resized, axis=0)  # Add batch dimension
     
     # Send the frame to the machine learning model for prediction
-    model_output = ""
-    
-    return {"message": "Frame processed successfully"}
+    model_output = classify_food(frame)
+    print(model_output)
+    food_item = await NutritionModel.filter(food__icontains=model_output).first()
+    return {"food_info": food_item}
 
 @router.get("/search_food", response_model=List[str])
 async def search_food(q: str = Query(..., min_length=1, description="Query string to search food names")):
