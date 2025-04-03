@@ -31,7 +31,7 @@ register_tortoise(
         "connections": {"default": tortoise_settings.db_connection},
         "apps": {
             "models": {
-                "models": ["models"],
+                "models": ["models.nutrition"],
                 "default_connection": "default",
             }
         },
