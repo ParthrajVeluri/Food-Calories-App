@@ -6,6 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9DADB5E12DAB3F00002AA7D8 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 9DADB5E02DAB3F00002AA7D8 /* Auth */; };
+		9DADB5E32DAB3F00002AA7D8 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 9DADB5E22DAB3F00002AA7D8 /* Functions */; };
+		9DADB5E52DAB3F00002AA7D8 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 9DADB5E42DAB3F00002AA7D8 /* PostgREST */; };
+		9DADB5E72DAB3F00002AA7D8 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 9DADB5E62DAB3F00002AA7D8 /* Realtime */; };
+		9DADB5E92DAB3F00002AA7D8 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 9DADB5E82DAB3F00002AA7D8 /* Storage */; };
+		9DADB5EB2DAB3F00002AA7D8 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9DADB5EA2DAB3F00002AA7D8 /* Supabase */; };
+		9DADB6002DAC90C4002AA7D8 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = 9DADB5FF2DAC90C4002AA7D8 /* Shimmer */; };
+		9DF1CD082DAFC13E007FAEBC /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 9DF1CD072DAFC13E007FAEBC /* SwiftSoup */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		9D0534A32DA9EDCF00F1CEE9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +40,22 @@
 		9D0534AC2DA9EDCF00F1CEE9 /* DishWishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DishWishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9D0534FE2DA9F5E600F1CEE9 /* Exceptions for "DishWish" folder in "DishWish" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 9D0534902DA9EDCD00F1CEE9 /* DishWish */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9D0534932DA9EDCD00F1CEE9 /* DishWish */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9D0534FE2DA9F5E600F1CEE9 /* Exceptions for "DishWish" folder in "DishWish" target */,
+			);
 			path = DishWish;
 			sourceTree = "<group>";
 		};
@@ -52,6 +76,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DADB5E52DAB3F00002AA7D8 /* PostgREST in Frameworks */,
+				9DADB5E32DAB3F00002AA7D8 /* Functions in Frameworks */,
+				9DADB5EB2DAB3F00002AA7D8 /* Supabase in Frameworks */,
+				9DADB5E12DAB3F00002AA7D8 /* Auth in Frameworks */,
+				9DADB5E92DAB3F00002AA7D8 /* Storage in Frameworks */,
+				9DF1CD082DAFC13E007FAEBC /* SwiftSoup in Frameworks */,
+				9DADB6002DAC90C4002AA7D8 /* Shimmer in Frameworks */,
+				9DADB5E72DAB3F00002AA7D8 /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +144,14 @@
 			);
 			name = DishWish;
 			packageProductDependencies = (
+				9DADB5E02DAB3F00002AA7D8 /* Auth */,
+				9DADB5E22DAB3F00002AA7D8 /* Functions */,
+				9DADB5E42DAB3F00002AA7D8 /* PostgREST */,
+				9DADB5E62DAB3F00002AA7D8 /* Realtime */,
+				9DADB5E82DAB3F00002AA7D8 /* Storage */,
+				9DADB5EA2DAB3F00002AA7D8 /* Supabase */,
+				9DADB5FF2DAC90C4002AA7D8 /* Shimmer */,
+				9DF1CD072DAFC13E007FAEBC /* SwiftSoup */,
 			);
 			productName = DishWish;
 			productReference = 9D0534912DA9EDCD00F1CEE9 /* DishWish.app */;
@@ -195,6 +235,11 @@
 			);
 			mainGroup = 9D0534882DA9EDCD00F1CEE9;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9DADB5DF2DAB3F00002AA7D8 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				9DADB5FE2DAC90C4002AA7D8 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
+				9DF1CD062DAFC13E007FAEBC /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9D0534922DA9EDCD00F1CEE9 /* Products */;
 			projectDirPath = "";
@@ -392,14 +437,20 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DishWish/Preview Content\"";
+				DEVELOPMENT_TEAM = 36H38V88V3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DishWish/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -409,9 +460,9 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iloveapplepie.DishWish;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iloveapplepie.dishwish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -429,14 +480,20 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DishWish/Preview Content\"";
+				DEVELOPMENT_TEAM = 36H38V88V3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DishWish/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -446,9 +503,9 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iloveapplepie.DishWish;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iloveapplepie.dishwish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -583,6 +640,76 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9DADB5DF2DAB3F00002AA7D8 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+		9DADB5FE2DAC90C4002AA7D8 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markiv/SwiftUI-Shimmer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.1;
+			};
+		};
+		9DF1CD062DAFC13E007FAEBC /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9DADB5E02DAB3F00002AA7D8 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DADB5DF2DAB3F00002AA7D8 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		9DADB5E22DAB3F00002AA7D8 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DADB5DF2DAB3F00002AA7D8 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		9DADB5E42DAB3F00002AA7D8 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DADB5DF2DAB3F00002AA7D8 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		9DADB5E62DAB3F00002AA7D8 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DADB5DF2DAB3F00002AA7D8 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		9DADB5E82DAB3F00002AA7D8 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DADB5DF2DAB3F00002AA7D8 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		9DADB5EA2DAB3F00002AA7D8 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DADB5DF2DAB3F00002AA7D8 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		9DADB5FF2DAC90C4002AA7D8 /* Shimmer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DADB5FE2DAC90C4002AA7D8 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */;
+			productName = Shimmer;
+		};
+		9DF1CD072DAFC13E007FAEBC /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DF1CD062DAFC13E007FAEBC /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9D0534892DA9EDCD00F1CEE9 /* Project object */;
 }
